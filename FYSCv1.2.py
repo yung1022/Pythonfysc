@@ -8,13 +8,13 @@ import os
 
 # -------DATABASE-------
 base_path = os.getcwd()
-file_name = "mydata.txt"
-file_name2 = "mydata2.txt"
-file_name3 = "mydata3.txt"
-Udatafile_name1 = "Udata1.txt"
-Udatafile_name2 = "Udata2.txt"
-Udatafile_name3 = "Udata3.txt"
-fyscdollarfile = "fyscdollar.txt"
+file_name = "data/mydata.txt"
+file_name2 = "data/mydata2.txt"
+file_name3 = "data/mydata3.txt"
+Udatafile_name1 = "data/Udata1.txt"
+Udatafile_name2 = "data/Udata2.txt"
+Udatafile_name3 = "data/Udata3.txt"
+fyscdollarfile = "data/fyscdollar.txt"
 full_path = os.path.join(base_path, file_name)
 full_path2 = os.path.join(base_path, file_name2)
 full_path3 = os.path.join(base_path, file_name3)
@@ -65,6 +65,7 @@ with open(Upath3, "wb") as f:
 with open(Upath4, "wb") as f:
     pickle.dump(fyscdollar, f, pickle.HIGHEST_PROTOCOL)"""
 
+# -------CLEAN SCREEN-------
 def clear_screen_ansi():
     print("\033[H\033[2J", end="")
 
