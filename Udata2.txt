@@ -1,1 +1,0 @@
-Because v1.3 now will auto find your file path, no edits are needed to the script.
