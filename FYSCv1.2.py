@@ -5,6 +5,7 @@ import random
 import threading
 import pickle
 import os
+import sys
 
 # -------DATABASE-------
 base_path = os.getcwd()
@@ -159,8 +160,10 @@ def savedata():
 
 
 threadgrowth = threading.Thread(target=growths)
+threadgrowth.daemon = True
 threadgrowth.start()
 savedata = threading.Thread(target=savedata)
+savedata.daemon = True
 savedata.start()
 
 while True:
@@ -214,7 +217,9 @@ your growth is %d.
         with open(file_path3, "wb") as f:
             pickle.dump(ctime, f, pickle.HIGHEST_PROTOCOL)
             print('saved', ctime)
-        print('you can now click the x button on the top right.')
+        print('Ending...')
+        sys.exit(0)
+        print('END FAILED')
     elif command == 'milestone':
         if subs >= 1000:
             milestone1 = int(0)
